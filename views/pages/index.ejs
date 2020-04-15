@@ -12,56 +12,100 @@
 <body>
     <section>
         <H2></H2>
-    </section>
-    <section>
+        <form action="">
+        <div class="form-container" >
+        <fieldset class="form1">
+                
+            <label for="location">
+                <h2>Van</h2> </label>
+            <input list="locaties" id="location" name="location" placeholder="Adres, station of postcode"/>
+
+            <datalist id="locaties">
+                <option value="Huidige Locatie">
+                <option value="Huis">
+                <option value="Werk">
+            </datalist>
+
+        </fieldset>
+    </div>
+        <div class="form-container" >
+        <fieldset class="form1">
+           
+            <label for="destination">
+                <h2>Naar</h2> </label>
+            <input list="bestemmingen" id="destination" name="destination" placeholder="Adres, station of postcode"/>
+
+            <datalist id="bestemmingen">
+                <option value="Huis">
+                <option value="Werk">
+            </datalist>
+
+        </fieldset>
         <H2></H2>
-        <div class="Timeinput">
-            <p id="TimeInputHour0"> 0</p>
-            <p id="TimeInputHour00"> 0</p>
-            <p> :</p>
-            <p id="TimeInputMin0"> 0</p>
-            <p id="TimeInputMin00"> 0</p>
-        </div>
-        <form>
+     
+    </div>
+    <div class="form-container" > 
+        <fieldset id="day0" class="datum">
+            <label for="day">
+                <h2>Dag</h2> </label>
+                <input type="number" value="15" id="day" min="0"  max="31" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
 
-            <!-- <fieldset id="hour0" class=""> -->
-                <!-- 
-                <label for="hour-0">
-                    <input type="radio" id="hour-0" name="hour-0" value="0">
-                    <span class="label-text">0</span></input> </label>
-
-                <label for="hour-1">
-                    <input type="radio" id="hour-1" name="hour-0" value="1">
-                    <span class="label-text">1</span></input> </label>
-
-                <label for="hour-2">
-                    <input type="radio" id="hour-2" name="hour-0" value="2">
-                    <span class="label-text">2</span></input> </label> -->
-                <!-- <label for= quantity>
-                    <input type="number" id="quantity" name="quantity" min="01" max="05"> -->
-
-              
-<!-- 
-            </fieldset> -->
-        <fieldset id="hour">
-            <label for="hour">
-
-                <input type="number" value="10" id="hour" min="0"  max="23" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
-            </label>
-            </label>
             </fieldset>
-
-            <fieldset id="min" class="">
-                <label for="hour">
-
-                    <input type="number" value="00" id="min" min="0"  max="59" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
-                </label>
-
-
+    
+            <fieldset id="month0" class="datum">
+                <label for="month">
+                    <h2>Maand</h2> </label>
+                    <input type="number" value="4" id="month" min="1"  max="12" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
+               
+    
+    
             </fieldset>
            
+       
+    
+        </div>
+    <div class="form-container" >
+        <fieldset class="buttons">
+            <label for="vertrek">
+            <input type="radio" id="vertrek" name="buttons" value="vertrek"
+            checked>
+            <span class="">Vertrek</span>
+     </label>
+     <label for="aankomst">
+            <input type="radio" id="aankomst" name="buttons" value="aankomst"
 
-            <!-- <button type="submit">Submit</button> -->
+            >
+            <span class="">Aankomst</span>
+     </label>
+
+        </fieldset>
+        <H2></H2>
+     
+    </div>
+
+    <div class="form-container" > 
+        <fieldset id="hour0" class="datum">
+            <label for="hour">
+                <h2>Uur</h2> </label>
+                <input type="number" value="10" id="hour" min="2"  max="23" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
+        
+            </fieldset>
+        
+            <fieldset id="minutes0" class="datum">
+                <label for="minutes">
+                    <h2>Minuten</h2> </label>
+                    <input type="number" value="00" id="minutes" min="00"  max="59" step="15" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
+               
+        
+        
+            </fieldset>
+           
+       
+
+        </div>
+        <div class="form-container" >
+            <button type="submit">Submit</button>
+            </div>
         </form>
     </section>
     <script src="./js/script.js"></script>
