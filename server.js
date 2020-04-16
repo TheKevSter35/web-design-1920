@@ -20,19 +20,12 @@ app.use(express.static(path.join(__dirname + 'public')))
 
 
 app.get('/', (req, res) => {
-    res.render('pages/index')
+    res.render('pages/index', { queries: req.query })
   })
 
-  // app.get('/', (req, res) => {
-  //   res.render('pages/buildshirt3')
-  // })
-
-  // app.get('/', (req, res) => {
-  //   res.render('pages/buildshirt4')
-  // })
-  // app.get('/', (req, res) => {
-  //   res.render('pages/finalshirt')
-  // })
+  app.get('/ticket', (req, res) => {
+    res.render('pages/ticket',  { queries: req.query })
+  })
 
 
   

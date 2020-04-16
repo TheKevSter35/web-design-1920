@@ -2,14 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 @font-face {
-    font-family: Streamster;
-    src: url(../source/fonts/SFAlienEncounters-Italic.ttf);
-}
-
-@font-face {
-    font-family: Nixies;
-    src: url(../source/fonts/NixiesRegular-anra.ttf);
-}
+    font-family: MetalMania;
+    src: url(../source/fonts/MetalMania.ttf);
+  }
 
 /****************************/
 /* Preset codes toepasbaar voor elke pagina*/
@@ -31,11 +26,28 @@ html {
     justify-content: center;
 }
 
-body {
-    margin: 0 auto;
-    min-height: calc(100vh - 0px);
-    /* background-color: #202024; */
+
+body::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.2;
+    z-index: -1;
 }
+body {
+    background-image: url(../source/pictures/metalbg3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;margin: 0 auto;
+    min-height: calc(100vh - 0px);
+    color: #fff;
+}
+
 
 body>section {
     padding-top: 112px;
@@ -261,6 +273,7 @@ label {
     position: relative;
     float: left;
     margin: 0.6em;
+    width: 100%;
 }
 
 legend {
@@ -323,6 +336,7 @@ fieldset {
     background-color: #35353B;
     padding: 16px;
     padding: 1em 1.4em;
+    width: 100%;
 }
 
 input[type="radio"]:before,
@@ -355,11 +369,16 @@ input::-webkit-inner-spin-button {
 }
 
 input[type="number"] {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     text-align: center;
-    font-size: 5em;
+    font-size: 1em;
     -moz-appearance: textfield;
+    width: 2em;
+    border: none;
+    border-bottom: 2px solid;
+    background-color: transparent;
+    color: #fff;
 }
 
 input[type="radio"]:hover:before {
@@ -425,9 +444,7 @@ span {
     font-weight: bold;
     font-size: 2em;
 }
-.datum label, .tijd label {
-    float: none;
-}
+
 label h2{
     color: #fff;
     padding-bottom: 0.7em;
@@ -450,6 +467,102 @@ label h2{
     font-weight: bold;
     font-family: Raleway,sans-serif;
 }
+
+#ticket section {
+    padding: 1em;
+}
+#ticket section h1 {
+    font-size: 3em;
+}
+.custom_ticket {
+    max-width: 20em;
+    margin: 0 auto;
+    min-height: 44em;
+    border: 2px solid #000;
+    position: relative;
+    top: 1em;
+}
+
+
+#ticket .custom_ticket section:nth-of-type(1) {
+    background-color: #000;
+    text-align: center;
+    padding: 2em;
+}
+#ticket .custom_ticket section:nth-of-type(1) h2 {
+    color: #fff;
+    font-size: 2em;
+}
+
+#ticket .custom_ticket section:nth-of-type(2) {
+    padding: 0;
+}
+
+#ticket .custom_ticket section:nth-of-type(3) {
+    padding: 0.5em;
+    /* border: 1em solid #000; */
+    text-align: center;
+    background-color: #212121;
+}
+#ticket .custom_ticket section:nth-of-type(3) main {
+    padding: 0.5em;
+}
+#ticket .custom_ticket section:nth-of-type(3) main strong {
+    color: #fff;
+}
+#ticket .custom_ticket section:nth-of-type(3) main h2 {
+    color: #fff;
+    font-family: MetalMania;
+}
+
+#ticket .custom_ticket section:nth-of-type(4) {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+#ticket .custom_ticket section:nth-of-type(4) h2 {
+    font-size: 1.4em;
+    color: #fff;
+}
+#ticket .custom_ticket section:nth-of-type(5) {
+    padding: 0;
+}
+#ticket .custom_ticket section:nth-of-type(5) ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#ticket .custom_ticket section:nth-of-type(5) ul:first-child {
+   background-color:#1B0D08;
+}
+
+#ticket .custom_ticket section:nth-of-type(5) ul:first-child li {
+    padding: 0.5em;
+}
+
+#ticket .custom_ticket section:nth-of-type(5) ul:first-child li:first-child,#ticket .custom_ticket section:nth-of-type(5) ul:last-child li:first-child {
+    border-right: 2px solid #fff;
+}
+#ticket .custom_ticket section:nth-of-type(5) ul:first-child h2 {
+    color:#fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+ }
+#ticket .custom_ticket section:nth-of-type(5) ul:last-child {
+    background-color: #000;
+
+ }
+ #ticket .custom_ticket section:nth-of-type(5) ul:last-child h3 {
+    color:#fff;
+ }
+
+ #ticket .custom_ticket section:nth-of-type(6)
+ {
+    background-color: #fff;
+
+ }
 
 /*tablets portrait mode*/
 @media (max-width:720px) {}

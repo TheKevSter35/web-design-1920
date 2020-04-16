@@ -1,104 +1,67 @@
 <!DOCTYPE html>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<%- include ('../partials/head.ejs') %>
 
 <body>
     <section>
         <H2></H2>
-        <form action="">
+        <form action="/ticket">
         <div class="form-container" >
         <fieldset class="form1">
                 
             <label for="location">
                 <h2>Van</h2> </label>
-            <input list="locaties" id="location" name="location" placeholder="Adres, station of postcode"/>
+            <input list="locaties" id="location" name="location" value="<%= queries.location %>"  placeholder="Adres, station of postcode"/>
 
             <datalist id="locaties">
-                <option value="Huidige Locatie">
-                <option value="Huis">
-                <option value="Werk">
+                <option value="Huidige Locatie" <% if (queries.location == "Huidige Locatie") { %> <% } %>>
+                    <option value="Huis" <% if (queries.location == "Huis") { %> <% } %>>
+                        <option value="Werk" <% if (queries.location == "Werk") { %> <% } %>>
             </datalist>
 
         </fieldset>
-    </div>
-        <div class="form-container" >
         <fieldset class="form1">
            
             <label for="destination">
                 <h2>Naar</h2> </label>
-            <input list="bestemmingen" id="destination" name="destination" placeholder="Adres, station of postcode"/>
+            <input list="bestemmingen" id="destination" name="destination" value="<%= queries.destination %>" placeholder="Adres, station of postcode"/>
 
             <datalist id="bestemmingen">
-                <option value="Huis">
-                <option value="Werk">
+                    <option value="Huis" <% if (queries.destination == "Huis") { %> <% } %>>
+                        <option value="Werk" <% if (queries.destination == "Werk") { %> <% } %>>
             </datalist>
-
         </fieldset>
-        <H2></H2>
-     
     </div>
-    <div class="form-container" > 
-        <fieldset id="day0" class="datum">
-            <label for="day">
-                <h2>Dag</h2> </label>
-                <input type="number" value="15" id="day" min="0"  max="31" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
-
-            </fieldset>
-    
-            <fieldset id="month0" class="datum">
-                <label for="month">
-                    <h2>Maand</h2> </label>
-                    <input type="number" value="4" id="month" min="1"  max="12" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
-               
-    
-    
-            </fieldset>
+        <!-- <div class="form-container" >
+        <fieldset class="form1">
            
-       
-    
-        </div>
-    <div class="form-container" >
-        <fieldset class="buttons">
-            <label for="vertrek">
-            <input type="radio" id="vertrek" name="buttons" value="vertrek"
-            checked>
-            <span class="">Vertrek</span>
-     </label>
-     <label for="aankomst">
-            <input type="radio" id="aankomst" name="buttons" value="aankomst"
+            <label for="destination">
+                <h2>Naar</h2> </label>
+            <input list="bestemmingen" id="destination" name="destination" value="<%= queries.destination %>" placeholder="Adres, station of postcode"/>
 
-            >
-            <span class="">Aankomst</span>
-     </label>
-
+            <datalist id="bestemmingen">
+                    <option value="Huis" <% if (queries.destination == "Huis") { %> <% } %>>
+                        <option value="Werk" <% if (queries.destination == "Werk") { %> <% } %>>
+            </datalist>
         </fieldset>
-        <H2></H2>
      
-    </div>
+    </div> -->
+   
 
     <div class="form-container" > 
         <fieldset id="hour0" class="datum">
+            <label for="datum">
+                <h2>Datum </br> <input type="number" id="day" min="1" name="day"  max="31" placeholder="DD"  value="<%= queries.day %>"> /<input type="number" id="month" min="1" name="month"  max="12" placeholder="MM"  value="<%= queries.month %>"> </h2> </label>
+                
+        
+            </fieldset>
+        <fieldset id="hour0" class="datum">
             <label for="hour">
-                <h2>Uur</h2> </label>
-                <input type="number" value="10" id="hour" min="2"  max="23" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
+                <h2>ik vertrek om </br> <input type="number" id="hour" min="1" name="hour"  max="23" placeholder="10"  value="<%= queries.hour %>"> : <input type="number" id="minuten" min="00" name="minuten"  max="59" placeholder="00"  value="<%= queries.minuten %>"> </h2> </label>
+                
         
             </fieldset>
         
-            <fieldset id="minutes0" class="datum">
-                <label for="minutes">
-                    <h2>Minuten</h2> </label>
-                    <input type="number" value="00" id="minutes" min="00"  max="59" step="15" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;">
-               
-        
-        
-            </fieldset>
            
        
 
