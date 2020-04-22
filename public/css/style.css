@@ -56,6 +56,13 @@ body {
     color: #fff;
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+nav li:first-child p {
+    padding: 0.7em;
+}
 
 body>section {
     padding-top: 112px;
@@ -67,14 +74,13 @@ body>section {
 nav {
     background-color: #202024;
     color: #fff;
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: relative;
     border-bottom: 2px solid #fff;
     z-index: 9;
     padding: 16px;
     padding: 1em;
-    display: inline-flex;
+    display: inline-block;
+    width: 100%;
 }
 
 nav img {
