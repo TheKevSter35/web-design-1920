@@ -90,11 +90,17 @@ nav img {
     height: 2em;
 }
 
-nav li {
-    float: left;
-    text-align: center;
-    margin: 0 8px;
-    margin: 0 0.5em;
+nav img.active {
+    border-bottom: 2px solid #fff;
+    top: 2px;
+}
+nav img {
+    width: 32px;
+    width: 2em;
+    height: 32px;
+    height: 2em;
+    border: 2px solid transparent;
+    position: relative;
 }
 
 nav li a {
