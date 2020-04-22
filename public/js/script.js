@@ -6,6 +6,7 @@ var hour = document.querySelector('#hour')
 var minuten = document.querySelector('#minuten')
 var submitButton = document.querySelector('button')
 
+l.focus();
 //destinationTab
 l.addEventListener('keydown', function(lTab){
     // arrow left
