@@ -3,6 +3,7 @@
 <%- include ('../partials/head.ejs') %>
 
 <body>
+    <%- include ('../partials/nav.ejs') %>
     <section>
         <H2></H2>
         <form action="/ticket">
@@ -11,10 +12,11 @@
                 
             <label for="location">
                 <h2>Van</h2> </label>
-            <input list="locaties" id="location" name="location" value="<%= queries.location %>"  placeholder="Adres, station of postcode"/>
+            <input type="text" list="locaties" id="location" name="location" value="<%= queries.location %>"  placeholder="Adres, station of postcode" ">
 
+        
             <datalist id="locaties">
-                <option value="Huidige Locatie" <% if (queries.location == "Huidige Locatie") { %> <% } %>>
+                <option id="HL" value="Huidige Locatie" <% if (queries.location == "Huidige Locatie") { %> <% } %>>
                     <option value="Huis" <% if (queries.location == "Huis") { %> <% } %>>
                         <option value="Werk" <% if (queries.location == "Werk") { %> <% } %>>
             </datalist>
@@ -24,11 +26,11 @@
            
             <label for="destination">
                 <h2>Naar</h2> </label>
-            <input list="bestemmingen" id="destination" name="destination" value="<%= queries.destination %>" placeholder="Adres, station of postcode"/>
+            <input type="text" onclick="myFunction()" list="bestemmingen" id="destination" name="destination" value="<%= queries.destination %>" placeholder="Adres, station of postcode"/>
 
             <datalist id="bestemmingen">
-                    <option value="Huis" <% if (queries.destination == "Huis") { %> <% } %>>
-                        <option value="Werk" <% if (queries.destination == "Werk") { %> <% } %>>
+                    <option id="HL2" value="Huis" <% if (queries.destination == "Huis") { %> <% } %>>
+                        <option id="WK" value="Werk" <% if (queries.destination == "Werk") { %> <% } %>>
             </datalist>
         </fieldset>
     </div>
@@ -51,13 +53,15 @@
     <div class="form-container" > 
         <fieldset id="hour0" class="datum">
             <label for="datum">
-                <h2>Datum </br> <input type="number" id="day" min="1" name="day"  max="31" placeholder="DD"  value="<%= queries.day %>"> /<input type="number" id="month" min="1" name="month"  max="12" placeholder="MM"  value="<%= queries.month %>"> </h2> </label>
+                <h2>Datum </br> <input type="number"  id="day" min="1" name="day" step='1'   max="31" placeholder="DD"  value="<%= queries.day %>"onkeydown="javascript: return event.keyCode == 69 ? false : true"> 
+                    /
+                    <input type="number" id="month" min="1" name="month"  max="12" placeholder="MM" step='1'  value="<%= queries.month %>"onkeydown="javascript: return event.keyCode == 69 ? false : true" > </h2> </label>
                 
         
             </fieldset>
         <fieldset id="hour0" class="datum">
             <label for="hour">
-                <h2>ik vertrek om </br> <input type="number" id="hour" min="1" name="hour"  max="23" placeholder="10"  value="<%= queries.hour %>"> : <input type="number" id="minuten" min="00" name="minuten"  max="59" placeholder="00"  value="<%= queries.minuten %>"> </h2> </label>
+                <h2>ik vertrek om </br> <input type="number" id="hour" min="1" name="hour" step='1'   max="23" placeholder="10"  value="<%= queries.hour %>"onkeydown="javascript: return event.keyCode == 69 ? false : true"> : <input type="number" id="minuten" min="00" name="minuten"  max="59" placeholder="00" step='15'   value="<%= queries.minuten %>" onkeydown="javascript: return event.keyCode == 69 ? false : true"> </h2> </label>
                 
         
             </fieldset>
@@ -71,7 +75,8 @@
             </div>
         </form>
     </section>
-    <script src="./js/script.js"></script>
+    <script defer src="./js/script.js"></script>
+
 </body>
 
 </html>

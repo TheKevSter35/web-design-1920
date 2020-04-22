@@ -17,7 +17,15 @@ html {
     font-family: 'Raleway', sans-serif;
     color: #000f;
 }
-
+fieldset.form1 input{
+    background-color: transparent ;
+    color: #fff;
+    border:none;
+    border-bottom: 2px solid #fff;
+}
+fieldset.form1 input:focus, input[type="number"]:focus, button:focus {
+    outline: 2px solid #f3f3f3;
+}
 
 .Timeinput {
     display: flex;
