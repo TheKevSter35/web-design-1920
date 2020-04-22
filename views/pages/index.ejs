@@ -12,7 +12,7 @@
                 
             <label for="location">
                 <h2>Van</h2> </label>
-            <input type="text" list="locaties" id="location" name="location" value="<%= queries.location %>"  placeholder="Adres, station of postcode" ">
+            <input type="text" list="locaties" id="location" name="location" value="<%= queries.location %>"  placeholder="Adres, station of postcode" required ">
 
         
             <datalist id="locaties">
@@ -26,7 +26,7 @@
            
             <label for="destination">
                 <h2>Naar</h2> </label>
-            <input type="text" onclick="myFunction()" list="bestemmingen" id="destination" name="destination" value="<%= queries.destination %>" placeholder="Adres, station of postcode"/>
+            <input type="text" onclick="myFunction()" list="bestemmingen" id="destination" name="destination" value="<%= queries.destination %>" placeholder="Adres, station of postcode" required/>
 
             <datalist id="bestemmingen">
                     <option id="HL2" value="Huis" <% if (queries.destination == "Huis") { %> <% } %>>
@@ -53,15 +53,15 @@
     <div class="form-container" > 
         <fieldset id="hour0" class="datum">
             <label for="datum">
-                <h2>Datum </br> <input type="number"  id="day" min="1" name="day" step='1'   max="31" placeholder="DD"  value="<%= queries.day %>"onkeydown="javascript: return event.keyCode == 69 ? false : true"> 
+                <h2>Datum </br> <input type="number"  id="day" min="1" name="day" step='1'   max="31" placeholder="DD"  value="<%= queries.day %>" required> 
                     /
-                    <input type="number" id="month" min="1" name="month"  max="12" placeholder="MM" step='1'  value="<%= queries.month %>"onkeydown="javascript: return event.keyCode == 69 ? false : true" > </h2> </label>
+                    <input type="number" id="month" min="1" name="month"  max="12" placeholder="MM" step='1'  value="<%= queries.month %>" required > </h2> </label>
                 
         
             </fieldset>
         <fieldset id="hour0" class="datum">
             <label for="hour">
-                <h2>ik vertrek om </br> <input type="number" id="hour" min="1" name="hour" step='1'   max="23" placeholder="10"  value="<%= queries.hour %>"onkeydown="javascript: return event.keyCode == 69 ? false : true"> : <input type="number" id="minuten" min="00" name="minuten"  max="59" placeholder="00" step='15'   value="<%= queries.minuten %>" onkeydown="javascript: return event.keyCode == 69 ? false : true"> </h2> </label>
+                <h2>ik vertrek om </br> <input type="number" id="hour" min="1" name="hour" step='1'   max="23" placeholder="10"  value="<%= queries.hour %>"onkeydown="javascript: return event.keyCode == 69 ? false : true" required> : <input type="number" id="minuten" min="00" name="minuten"  max="59" placeholder="00" step='15'   value="<%= queries.minuten %>" onkeydown="javascript: return event.keyCode == 69 ? false : true" required> </h2> </label>
                 
         
             </fieldset>
