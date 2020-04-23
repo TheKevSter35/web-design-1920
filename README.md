@@ -28,11 +28,11 @@ npm run dev
 - [x] Add Nonsence (The metal travel ticket)
 - [x] If correct answer fetch a new img and the name for the user to guess.
 - [ ] Fix keyevents function so he can use the input type text (he can't go back a string).
-- [ ] 
-- [ ] Show the winner if the game is over (high score)
-- [ ] Updating Styling
+- [ ] Style the form a little more metal (but just a little)
+
 
 ## wishlist
 
 - [ ] add a editor mode
 - [ ] use real time location and time
+- [ ] Print ticket
