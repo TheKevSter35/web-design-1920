@@ -38,16 +38,16 @@
     <div class="form-container" > 
         <fieldset id="hour0" class="datum">
             <label for="datum">
-                <h2>Datum </br> <input type="number"  id="day" min="1" name="day" step='1'   max="31" placeholder="DD"  value="<%= queries.day %>" onkeydown="javascript: return event.keyCode == 69 ? false : true" maxlength = "2" oninput="maxLengthCheck(this)" required> 
+                <h2>Datum </br> <input type="number"  id="day" min="1" name="day" step='1'   max="31" placeholder="DD"  value="<%= queries.day %>"  maxlength = "2" oninput="maxLengthCheck(this)" required> 
                
                     /
-                    <input type="number" id="month" min="1" name="month"  max="12" placeholder="MM" step='1'  value="<%= queries.month %>" onkeydown="javascript: return event.keyCode == 69 ? false : true" maxlength = "2" oninput="maxLengthCheck(this)"  required > </h2> </label>
+                    <input type="number" id="month" min="1" name="month"  max="12" placeholder="MM" step='1'  value="<%= queries.month %>"  maxlength = "2" oninput="maxLengthCheck(this)"  required > </h2> </label>
                 
         
             </fieldset>
         <fieldset id="hour0" class="datum">
             <label for="hour">
-                <h2>ik vertrek om </br> <input type="number" id="hour" min="1" name="hour" step='1'   max="23" placeholder="10"  value="<%= queries.hour %>"onkeydown="javascript: return event.keyCode == 69 ? false : true" maxlength = "2" oninput="maxLengthCheck(this)"  required> : <input type="number" id="minuten" min="00" name="minuten"  max="59" placeholder="00" step='1'   value="<%= queries.minuten %>" onkeydown="javascript: return event.keyCode == 69 ? false : true" maxlength = "2" oninput="maxLengthCheck(this)"  required> </h2> </label>
+                <h2>ik vertrek om </br> <input type="number" id="hour" min="1" name="hour" step='1'   max="23" placeholder="10"  value="<%= queries.hour %>" maxlength = "2" oninput="maxLengthCheck(this)"  required> : <input type="number" id="minuten" min="00" name="minuten"  max="59" placeholder="00" step='1'   value="<%= queries.minuten %>" maxlength = "2" oninput="maxLengthCheck(this)"  required> </h2> </label>
                 
         
             </fieldset>

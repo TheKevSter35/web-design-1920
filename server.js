@@ -2,7 +2,7 @@ let express = require('express')
 let bodyParser = require('body-parser')
 let path = require('path')
 let app = express()
-let port = process.env.PORT || 5000
+let port = process.env.PORT || 3000
 
 //view Engines 
 app.set('view engine', 'ejs')
