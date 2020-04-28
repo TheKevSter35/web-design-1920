@@ -1,9 +1,7 @@
 let printsheet = document.getElementById("printsheet")
-    printsheet.addEventListener("click", printSheet);
+printsheet.addEventListener("click", printSheet);
 
-    function printSheet(){
-        window.print();
-    }
-
-
-    printsheet.focus()
+function printSheet() {
+    window.print();
+}
+printsheet.focus()
