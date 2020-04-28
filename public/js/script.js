@@ -35,16 +35,19 @@ function Shiftbutton() {
     }, 250);
 
 }
+
 //location
 l.addEventListener('keydown', function (lTab) {
     // arrow left
     if (lTab.shiftKey && lTab.keyCode == 37) {
         document.querySelector('button').focus();
+        Shiftbutton()
         arrowLeft()
         return false;
     } //arrowright
     else if (lTab.shiftKey && lTab.keyCode == 39) {
         document.getElementById("destination").focus();
+        Shiftbutton()
         arrowRight()
         return false;
     }
@@ -55,11 +58,14 @@ destination.addEventListener('keydown', function (destinationTab) {
     // arrow left
     if (destinationTab.shiftKey && destinationTab.keyCode == 37) {
         document.getElementById("location").focus();
+        Shiftbutton()
         arrowLeft()
         return false;
     } //arrowright
     else if (destinationTab.shiftKey && destinationTab.keyCode == 39) {
         document.getElementById("day").focus();
+        Shiftbutton()
+        arrowRight()
         return false;
     }
 })
@@ -68,11 +74,13 @@ day.addEventListener('keydown', function (dayTab) {
     // arrow left
     if (dayTab.shiftKey && dayTab.keyCode == 37) {
         document.getElementById("destination").focus();
+        Shiftbutton()
         arrowLeft()
         return false;
     } //arrowright
     else if (dayTab.shiftKey && dayTab.keyCode == 39) {
         document.getElementById("month").focus();
+        Shiftbutton()
         arrowRight()
         return false;
     }
@@ -96,11 +104,13 @@ month.addEventListener('keydown', function (monthTab) {
     // arrow left
     if (monthTab.shiftKey && monthTab.keyCode == 37) {
         document.getElementById("day").focus();
+        Shiftbutton()
         arrowLeft()
         return false;
     } //arrowright
     else if (monthTab.shiftKey && monthTab.keyCode == 39) {
         document.getElementById("hour").focus();
+        Shiftbutton()
         arrowRight()
         return false;
     }
@@ -124,11 +134,13 @@ hour.addEventListener('keydown', function (hourTab) {
     // arrow left
     if (hourTab.shiftKey && hourTab.keyCode == 37) {
         document.getElementById("month").focus();
+        Shiftbutton()
         arrowLeft()
         return false;
     } //arrowright
     else if (hourTab.shiftKey && hourTab.keyCode == 39) {
         document.getElementById("minuten").focus();
+        Shiftbutton()
         arrowRight()
         return false;
     }
@@ -154,11 +166,13 @@ minuten.addEventListener('keydown', function (minutenTab) {
     // arrow left
     if (minutenTab.shiftKey && minutenTab.keyCode == 37) {
         document.getElementById("hour").focus();
+        Shiftbutton()
         arrowLeft()
         return false
     } //arrowright
     else if (minutenTab.shiftKey && minutenTab.keyCode == 39) {
         document.querySelector('button').focus();
+        Shiftbutton()
         arrowRight()
         return false;
     }
@@ -183,11 +197,13 @@ submitButton.addEventListener('keydown', function (submitButtonTab) {
     // arrow left
     if (submitButtonTab.shiftKey && submitButtonTab.keyCode == 37) {
         document.getElementById("minuten").focus();
+        Shiftbutton()
         arrowLeft()
         return false
     } //arrowright
     else if (submitButtonTab.shiftKey && submitButtonTab.keyCode == 39) {
         document.getElementById("location").focus();
+        Shiftbutton()
         arrowRight()
         return false;
     }

@@ -3,19 +3,31 @@
     body{
         background-color: #fff;
     }
-    #finaldesign > section {
-        margin: 0 auto;
-        text-align: center;
-        padding: 2em;
-        background: #202024;
-
+    #ticket .custom_ticket section:nth-of-type(1){
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact !important;
     }
-
-
-    #finaldesign .shirteditor main section ul li{
-        border: 2px solid #000;
+    #ticket .custom_ticket section:nth-of-type(1){
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact !important;
     }
-    #finaldesign .settings, nav{
+    #ticket .custom_ticket section:nth-of-type(3) {
+        background-color: #212121;
+        -webkit-print-color-adjust: exact !important;
+    }
+    #ticket .custom_ticket section:nth-of-type(4) {
+        background-color: #000000;
+        -webkit-print-color-adjust: exact !important;
+    }
+    #ticket .custom_ticket section:nth-of-type(5) ul:first-child {
+        background-color: #1B0D08;
+        -webkit-print-color-adjust: exact !important;
+    }
+    #ticket .custom_ticket section:nth-of-type(5) ul:last-child {
+        background-color: #000;
+        -webkit-print-color-adjust: exact !important;
+    }
+    .settings{
         display: none;
     }
    }
