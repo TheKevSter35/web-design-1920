@@ -27,7 +27,8 @@ npm run dev
 - [x] Add personality (Styling) that fit the user.
 - [x] Add Nonsence (The metal travel ticket)
 - [x] If correct answer fetch a new img and the name for the user to guess.
-- [ ] Fix keyevents function so he can use the input type text (he can't go back a string).
+- [x] Fix keyevents function so he can use the input type text (he can't go back a string).
+- [x] Print ticket
 - [ ] Style the form a little more metal (but just a little)
 
 
@@ -35,4 +36,4 @@ npm run dev
 
 - [ ] add a editor mode
 - [ ] use real time location and time
-- [ ] Print ticket
+
