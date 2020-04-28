@@ -11,7 +11,24 @@
 * {
     box-sizing: border-box;
 }
-
+img#shift-con {
+    width: auto;
+}
+li p b {
+    font-size: 2em;
+    padding: 0.2em;
+    position: relative;
+    bottom: 4px;
+}
+li p i {
+    position: relative;
+    bottom: 10px;
+    padding: 1em 0.6em;
+}
+li p b:nth-of-type(2) {
+    font-size: 1em;
+    bottom: 10px;
+}
 html {
 
     font-family: 'Raleway', sans-serif;

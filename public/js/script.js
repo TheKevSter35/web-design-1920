@@ -11,25 +11,31 @@ l.focus();
 function arrowLeft () {
     let leftArrow = document.querySelector('#left-con')
     leftArrow.classList.add("active")
-    let rightArrow = document.querySelector('#right-con')
-    rightArrow.classList.remove("active")
+    setTimeout(function(){  leftArrow.classList.remove("active") }, 250);
+    // let rightArrow = document.querySelector('#right-con')
+    // rightArrow.classList.remove("active")
 }
 function arrowRight () {
     let rightArrow = document.querySelector('#right-con')
     rightArrow.classList.add("active")
-    let leftArrow = document.querySelector('#left-con')
-    leftArrow.classList.remove("active")
+    setTimeout(function(){  rightArrow.classList.remove("active") }, 250);
     
 }
-//destinationTab
+function Shiftbutton () {
+    let Shiftbutton = document.querySelector('#shift-con')
+    Shiftbutton.classList.add("active")
+    setTimeout(function(){  Shiftbutton.classList.remove("active") }, 250);
+    
+}
+//location
 l.addEventListener('keydown', function(lTab){
     // arrow left
-    if (lTab.which == 37) {
+    if (lTab.shiftKey && lTab.keyCode == 37) {
         document.querySelector('button').focus();
         arrowLeft()
         return false;
     }//arrowright
-     else if (lTab.which === 39) {
+     else if (lTab.shiftKey && lTab.keyCode == 39) {
         document.getElementById("destination").focus();
         arrowRight()
         return false;
@@ -39,12 +45,12 @@ l.addEventListener('keydown', function(lTab){
 //destinationTab
 destination.addEventListener('keydown', function(destinationTab){
     // arrow left
-    if (destinationTab.which == 37) {
+    if (destinationTab.shiftKey && destinationTab.keyCode == 37) {
         document.getElementById("location").focus();
         arrowLeft()
         return false;
     }//arrowright
-     else if (destinationTab.which === 39) {
+     else if (destinationTab.shiftKey && destinationTab.keyCode == 39) {
         document.getElementById("day").focus();
         return false;
     }
@@ -52,12 +58,12 @@ destination.addEventListener('keydown', function(destinationTab){
 
 day.addEventListener('keydown', function(dayTab){
     // arrow left
-    if (dayTab.which == 37) {
+    if (dayTab.shiftKey && dayTab.keyCode == 37) {
         document.getElementById("destination").focus();
         arrowLeft()
         return false;
     }//arrowright
-     else if (dayTab.which === 39) {
+     else if (dayTab.shiftKey && dayTab.keyCode == 39) {
         document.getElementById("month").focus();
         arrowRight()
         return false;
@@ -65,12 +71,12 @@ day.addEventListener('keydown', function(dayTab){
 })
 month.addEventListener('keydown', function(monthTab){
     // arrow left
-    if (monthTab.which == 37) {
+    if (monthTab.shiftKey && monthTab.keyCode == 37) {
         document.getElementById("day").focus();
         arrowLeft()
         return false;
     }//arrowright
-     else if (monthTab.which === 39) {
+     else if (monthTab.shiftKey && monthTab.keyCode == 39) {
         document.getElementById("hour").focus();
         arrowRight()
         return false;
@@ -78,12 +84,12 @@ month.addEventListener('keydown', function(monthTab){
 })
 hour.addEventListener('keydown', function(hourTab){
     // arrow left
-    if (hourTab.which == 37) {
+    if (hourTab.shiftKey && hourTab.keyCode == 37) {
         document.getElementById("month").focus();
         arrowLeft()
         return false;
     }//arrowright
-     else if (hourTab.which === 39) {
+     else if (hourTab.shiftKey && hourTab.keyCode ==  39) {
         document.getElementById("minuten").focus();
         arrowRight()
         return false;
@@ -91,12 +97,12 @@ hour.addEventListener('keydown', function(hourTab){
 })
 minuten.addEventListener('keydown', function(minutenTab){
     // arrow left
-    if (minutenTab.which == 37) {
+    if (minutenTab.shiftKey && minutenTab.keyCode == 37) {
         document.getElementById("hour").focus();
         arrowLeft()
         return false
     }//arrowright
-     else if (minutenTab.which === 39) {
+     else if (minutenTab.shiftKey && minutenTab.keyCode == 39) {
         document.querySelector('button').focus();
         arrowRight()
         return false;
@@ -105,15 +111,20 @@ minuten.addEventListener('keydown', function(minutenTab){
 
 submitButton.addEventListener('keydown', function(submitButtonTab){
     // arrow left
-    if (submitButtonTab.which == 37) {
+    if (submitButtonTab.shiftKey && submitButtonTab.keyCode == 37) {
         document.getElementById("minuten").focus();
         arrowLeft()
         return false
     }//arrowright
-     else if (submitButtonTab.which === 39) {
+     else if (submitButtonTab.shiftKey && submitButtonTab.keyCode == 39) {
         document.getElementById("location").focus();
         arrowRight()
         return false;
     }
 })
 
+function maxLengthCheck(object)
+                        {
+                          if (object.value.length > object.maxLength)
+                            object.value = object.value.slice(0, object.maxLength)
+                        }
