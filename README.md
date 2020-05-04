@@ -2,6 +2,9 @@
 
 See research https://github.com/TheKevSter35/web-design-1920/wiki
 
+## [Introduction](https://github.com/TheKevSter35/web-design-1920/wiki/The-introduction-of-Marijn-Meijles)
+
+<img width="" alt="0bcb81ea25ac002c3055d33cbbb9b1e5" src="https://user-images.githubusercontent.com/43183768/80956164-f3398a00-8e00-11ea-87fb-057aad35c47e.png">
 
 ## Install 
 
@@ -18,7 +21,13 @@ npm install
 npm run dev
 ```
 
-See Exclusive Design Principles https://github.com/TheKevSter35/web-design-1920/wiki/Exclusive-Design-Principles
+[Exclusive Design Principles](https://github.com/TheKevSter35/web-design-1920/wiki/Exclusive-Design-Principles) 
+
+## Test Rondes
+
+[Ronde 1](https://github.com/TheKevSter35/web-design-1920/wiki/Test-round-1) 
+[Ronde 2](https://github.com/TheKevSter35/web-design-1920/wiki/Test-round-2) 
+[Ronde 3](https://github.com/TheKevSter35/web-design-1920/wiki/Test-round-3) 
 
 ## To do List
 - [x] Use  type numbers to set a date and time.
