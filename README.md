@@ -18,7 +18,7 @@ npm install
 # Start liveserver
 npm run dev
 ```
-See Exclusive Design Principles ehttps://github.com/TheKevSter35/web-design-1920/wiki/Exclusive-Design-Principles
+See Exclusive Design Principles https://github.com/TheKevSter35/web-design-1920/wiki/Exclusive-Design-Principles
 
 ## To do List
 - [x] Use  type numbers to set a date and time.
