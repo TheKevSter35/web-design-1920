@@ -45,12 +45,12 @@ npm run dev
 - [x] Fix keyevents function so he can use the input type text (he can't go back a string).
 - [x] Print ticket
 - [ ] When selected home on (van) you can't selected it from (naar)
-
-
+- [ ] Number imput rest to default value if is higher then the max value.
 
 
 ## wishlist
 
 - [ ] add a editor mode
 - [ ] use real time location and time
+- [ ] add a desciption how to travel van 1 location to the other location on the ticket
 
