@@ -4,7 +4,7 @@
 @font-face {
     font-family: MetalMania;
     src: url(../source/fonts/MetalMania.ttf);
-  }
+}
 
 /****************************/
 /* Preset codes toepasbaar voor elke pagina*/
@@ -23,36 +23,45 @@
     padding-bottom: 0.2em;
     margin: 0;
 }
+
 img#shift-con {
     width: auto;
 }
+
 li p b {
     font-size: 2em;
     padding: 0.2em;
     position: relative;
     bottom: 4px;
 }
+
 li p i {
     position: relative;
     bottom: 10px;
     padding: 1em 0.6em;
 }
+
 li p b:nth-of-type(2) {
     font-size: 1em;
     bottom: 10px;
 }
+
 html {
 
     font-family: 'Raleway', sans-serif;
     color: #000f;
 }
-fieldset.form1 input{
-    background-color: transparent ;
+
+fieldset.form1 input {
+    background-color: transparent;
     color: #fff;
-    border:none;
+    border: none;
     border-bottom: 2px solid #fff;
 }
-fieldset.form1 input:focus, input[type="number"]:focus, button:focus {
+
+fieldset.form1 input:focus,
+input[type="number"]:focus,
+button:focus {
     outline: 2px solid #f3f3f3;
 }
 
@@ -75,12 +84,14 @@ body::after {
     opacity: 0.2;
     z-index: -1;
 }
+
 body {
     background-image: url(../source/pictures/metalbg3.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: relative;margin: 0 auto;
+    position: relative;
+    margin: 0 auto;
     min-height: calc(100vh - 0px);
     color: #fff;
 }
@@ -89,6 +100,7 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
 nav li:first-child p {
     padding: 0.7em;
 }
@@ -123,6 +135,7 @@ nav img.active {
     border-bottom: 2px solid #fff;
     top: 2px;
 }
+
 nav img {
     width: 32px;
     width: 2em;
@@ -405,7 +418,7 @@ input[type="radio"]::before {
 
 input[type="radio"]:checked::before,
 input[type="radio"]:focus,
-input[type="radio"]:active:before   {
+input[type="radio"]:active:before {
     background-color: green;
     color: #fff;
     filter: grayscale(0.4);
@@ -413,8 +426,8 @@ input[type="radio"]:active:before   {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input[type="number"] {
@@ -455,6 +468,7 @@ input[type="radio"] {
     cursor: inherit;
     border: 1px solid #000;
 }
+
 input[type="radio"] span {
     z-index: 9;
     color: #000;
@@ -463,6 +477,7 @@ input[type="radio"] span {
 fieldset.form1 {
     width: 100%;
 }
+
 fieldset.form1 input {
     width: inherit;
     height: inherit;
@@ -477,11 +492,13 @@ fieldset.form1 label {
     height: 3em;
     text-align: left;
 }
+
 fieldset.buttons {
     width: 100%;
     background-color: transparent;
     border: none;
 }
+
 fieldset.buttons label {
     margin: 1em;
     width: 16.6em;
@@ -489,17 +506,18 @@ fieldset.buttons label {
     padding: 1.5em;
     cursor: pointer;
 }
+
 span {
     font-weight: bold;
     font-size: 2em;
 }
 
-label h2{
+label h2 {
     color: #fff;
     padding-bottom: 0.7em;
 }
 
- button {
+button {
     padding: 16px 32px;
     padding: 1em 2em;
     margin: 0 16px;
@@ -509,20 +527,27 @@ label h2{
     cursor: pointer;
     border-radius: 8px;
     border-radius: 0.5em;
-    font-size: 0.8em;
+    font-size: 1.1em;
     text-decoration: none;
     background-color: #fff;
     color: #000;
     font-weight: bold;
-    font-family: Raleway,sans-serif;
+    font-family: Raleway, sans-serif;
+    cursor: url('../source/gestures.png'), auto;
+    font-family: MetalMania;
+    margin-top: 2em;
+    padding: 1.2em 2.5em;
+    font-size: 1.3em;
 }
 
 #ticket section {
     padding: 1em;
 }
+
 #ticket section h1 {
     font-size: 3em;
 }
+
 .custom_ticket {
     max-width: 20em;
     margin: 0 auto;
@@ -539,6 +564,7 @@ label h2{
     text-align: center;
     padding: 2em;
 }
+
 #ticket .custom_ticket section:nth-of-type(1) h2 {
     color: #fff;
     font-size: 2em;
@@ -554,12 +580,15 @@ label h2{
     text-align: center;
     background-color: #212121;
 }
+
 #ticket .custom_ticket section:nth-of-type(3) main {
     padding: 0.5em;
 }
+
 #ticket .custom_ticket section:nth-of-type(3) main strong {
     color: #fff;
 }
+
 #ticket .custom_ticket section:nth-of-type(3) main h2 {
     color: #fff;
     font-family: MetalMania;
@@ -575,49 +604,60 @@ label h2{
     font-size: 1.4em;
     color: #fff;
 }
+
 #ticket .custom_ticket section:nth-of-type(5) {
     padding: 0;
 }
+
 #ticket .custom_ticket section:nth-of-type(5) ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 #ticket .custom_ticket section:nth-of-type(5) ul:first-child {
-   background-color:#1B0D08;
+    background-color: #1B0D08;
 }
 
 #ticket .custom_ticket section:nth-of-type(5) ul:first-child li {
     padding: 0.5em;
 }
 
-#ticket .custom_ticket section:nth-of-type(5) ul:first-child li:first-child,#ticket .custom_ticket section:nth-of-type(5) ul:last-child li:first-child {
+#ticket .custom_ticket section:nth-of-type(5) ul:first-child li:first-child,
+#ticket .custom_ticket section:nth-of-type(5) ul:last-child li:first-child {
     border-right: 2px solid #fff;
 }
+
 #ticket .custom_ticket section:nth-of-type(5) ul:first-child h2 {
-    color:#fff;
+    color: #fff;
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
- }
+}
+
 #ticket .custom_ticket section:nth-of-type(5) ul:last-child {
     background-color: #000;
 
- }
- #ticket .custom_ticket section:nth-of-type(5) ul:last-child h3 {
-    color:#fff;
- }
+}
 
- #ticket .custom_ticket section:nth-of-type(6)
- {
+#ticket .custom_ticket section:nth-of-type(5) ul:last-child h3 {
+    color: #fff;
+}
+
+#ticket .custom_ticket section:nth-of-type(6) {
     background-color: #fff;
 
- }
+}
 
+#printsheet {
+    margin-top: 1em;
+}
 /*tablets portrait mode*/
-@media (max-width:720px) {}
-
-
+@media (max-width:720px) {
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /*mobile */
 @media (max-width:480px) {}
