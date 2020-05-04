@@ -2,7 +2,6 @@
 
 See research https://github.com/TheKevSter35/web-design-1920/wiki
 
-<img width="" alt="0bcb81ea25ac002c3055d33cbbb9b1e5" src="https://user-images.githubusercontent.com/43183768/80956164-f3398a00-8e00-11ea-87fb-057aad35c47e.png">
 
 ## Install 
 
@@ -18,7 +17,7 @@ npm install
 # Start liveserver
 npm run dev
 ```
-See Exclusive Design Principles ehttps://github.com/TheKevSter35/web-design-1920/wiki/Exclusive-Design-Principles
+
 
 ## To do List
 - [x] Use  type numbers to set a date and time.
@@ -30,7 +29,9 @@ See Exclusive Design Principles ehttps://github.com/TheKevSter35/web-design-1920
 - [x] If correct answer fetch a new img and the name for the user to guess.
 - [x] Fix keyevents function so he can use the input type text (he can't go back a string).
 - [x] Print ticket
-- [ ] Style the form a little more metal (but just a little)
+- [ ] When selected home on (van) you can't selected it from (naar)
+
+
 
 
 ## wishlist
