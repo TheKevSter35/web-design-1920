@@ -54,3 +54,7 @@ npm run dev
 - [ ] use real time location and time
 - [ ] add a desciption how to travel van 1 location to the other location on the ticket
 
+
+## Conclusie
+
+[Conclusie](https://github.com/TheKevSter35/web-design-1920/wiki/Conclusie)
